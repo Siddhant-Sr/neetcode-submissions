@@ -1,0 +1,16 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        nums.sort()
+
+        i = 0
+        j = 1
+        n = len(nums)
+
+        while j < n:
+            if nums[i] == nums[j]:
+                return True
+
+            i += 1
+            j += 1
+
+        return False
